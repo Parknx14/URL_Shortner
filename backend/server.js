@@ -236,7 +236,9 @@ const { generalLimiter } = require('./middleware/rateLimiter');
 
 const authRoutes = require('./routes/auth');
 const urlRoutes  = require('./routes/urls');
+const cors = require("cors");
 
+app.use(cors());
 const app = express();
 
 app.use(cors({
