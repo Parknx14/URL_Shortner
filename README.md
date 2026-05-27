@@ -1,7 +1,6 @@
 # SnapLink — Full-Stack URL Shortener
 
-A real full-stack project structured exactly like professional developers build it.
-No single HTML file tricks — this is how it actually works.
+
 
 ## Project Structure
 
