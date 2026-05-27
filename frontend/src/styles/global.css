@@ -1,0 +1,113 @@
+/* =============================================================
+   global.css
+   =============================================================
+   Global styles that apply to the entire app.
+   Component-specific styles go in each component's file.
+
+   CSS CUSTOM PROPERTIES (variables):
+     Defined on :root so they're available everywhere.
+     Change one value here → updates the whole app.
+   ============================================================= */
+
+:root {
+  --bg-primary:  #0a0a0f;
+  --bg-card:     #111118;
+  --bg-input:    #1a1a25;
+  --border:      #2a2a3a;
+  --accent:      #7c5cfc;
+  --accent-glow: rgba(124, 92, 252, 0.25);
+  --accent2:     #fc5c7c;
+  --accent3:     #5cfcb4;
+  --text-primary: #f0f0ff;
+  --text-muted:  #6e6e8e;
+  --text-dim:    #3a3a5a;
+  --success:     #5cfcb4;
+  --error:       #fc5c5c;
+  --warning:     #fcdc5c;
+  --font-display: 'Syne', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+  --radius:      12px;
+  --radius-sm:   6px;
+}
+
+/* CSS Reset — remove all browser default styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-display);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* Subtle animated gradient background */
+  background-image:
+    radial-gradient(ellipse at 20% 20%, rgba(124,92,252,0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(252,92,124,0.07) 0%, transparent 50%);
+}
+
+/* Custom scrollbar (Chrome/Edge/Safari) */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* Remove default button/input styles */
+button { font-family: inherit; cursor: pointer; }
+input, select, textarea { font-family: var(--font-mono); }
+a { text-decoration: none; color: inherit; }
+
+/* Utility classes — like a tiny Tailwind */
+.flex         { display: flex; }
+.flex-col     { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-center  { justify-content: center; }
+.gap-2  { gap: 8px; }
+.gap-3  { gap: 12px; }
+.gap-4  { gap: 16px; }
+.mt-2   { margin-top: 8px; }
+.mt-3   { margin-top: 12px; }
+.mt-4   { margin-top: 16px; }
+.mb-2   { margin-bottom: 8px; }
+.mb-4   { margin-bottom: 16px; }
+.w-full { width: 100%; }
+.text-sm    { font-size: 0.875rem; }
+.text-xs    { font-size: 0.75rem; }
+.text-muted { color: var(--text-muted); }
+.text-accent  { color: var(--accent); }
+.text-success { color: var(--success); }
+.text-error   { color: var(--error); }
+.font-mono    { font-family: var(--font-mono); }
+.font-bold    { font-weight: 700; }
+.hidden       { display: none !important; }
+.truncate     { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Fade-up animation — used when new elements appear */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.3s ease; }
+
+/* Slide-in from right — for toast notifications */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Spin animation — for loading spinners */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.spinner {
+  width: 18px; height: 18px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}

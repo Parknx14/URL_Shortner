@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+  index.html — The ONLY HTML file in a React app.
+
+  React apps are "Single Page Applications" (SPAs):
+  - There's just ONE html file
+  - React renders everything into <div id="root">
+  - When you navigate between pages, React swaps out components
+    WITHOUT reloading the page (no full page refresh!)
+
+  Vite injects the compiled JavaScript bundle via <script type="module">
+  at build time. In development, it serves files directly.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SnapLink — URL Shortener</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!--
+      React mounts here. This div starts empty.
+      After React loads, it fills this with your entire UI.
+      ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+    -->
+    <div id="root"></div>
+
+    <!--
+      type="module" tells the browser this is ES module JavaScript.
+      Vite uses this as the entry point — it reads main.jsx and
+      follows all the imports to build the app.
+    -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

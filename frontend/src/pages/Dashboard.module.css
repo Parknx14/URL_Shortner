@@ -1,0 +1,59 @@
+/* Dashboard.module.css */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  width: 100%;
+  flex: 1;
+}
+
+/* Tab bar container */
+.tabBar {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  width: fit-content;
+  margin-bottom: 24px;
+}
+
+/* Individual tab button */
+.tab {
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.2s;
+  border: none;
+  background: transparent;
+  font-family: var(--font-display);
+  white-space: nowrap;
+}
+
+.tab:hover:not(.tabActive) {
+  color: var(--text-primary);
+}
+
+/* Active tab — highlighted */
+.tabActive {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+@media (max-width: 640px) {
+  .main { padding: 16px; }
+  .tabBar { width: 100%; overflow-x: auto; }
+  .tab { padding: 8px 12px; font-size: 0.8rem; }
+}
