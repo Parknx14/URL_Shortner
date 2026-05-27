@@ -238,7 +238,7 @@ const authRoutes = require('./routes/auth');
 const urlRoutes  = require('./routes/urls');
 
 const app = express();
-const cors = require('cors');
+
 
 app.use(cors({
   origin: true,
