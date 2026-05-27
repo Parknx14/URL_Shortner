@@ -29,7 +29,7 @@ const api = axios.create({
   // baseURL: all requests are prefixed with this
   // api.get('/urls') → fetches http://localhost:5173/api/urls
   // (Vite proxies this to http://localhost:5000/api/urls)
-  baseURL: '/api',
+  baseURL:  import.meta.env.VITE_API_URL,
 
   // timeout: if the server doesn't respond in 10s, reject the request
   timeout: 10000,
