@@ -26,7 +26,7 @@ import UrlsTab     from '../components/UrlsTab';
 
 import Toast       from '../components/Toast';
 
-import styles from './Dashboard.module.css';
+import styles from './Dashboard1.module.css';
 
 export default function Dashboard() {
   const { user, logout } = useAuth();

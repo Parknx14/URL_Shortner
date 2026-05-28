@@ -14,7 +14,7 @@
 // =============================================================
 
 import React from 'react';
-import styles from './Navbar.module.css';
+import styles from './Navbar1.module.css';
 
 // Destructuring props: instead of props.user and props.onLogout,
 // we pull them out in the function signature for cleaner code

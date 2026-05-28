@@ -19,7 +19,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'; // 'react-dom/client' is the React 18 package
 import App from './App';                 // our root component
-import './styles/global.css';            // global CSS styles
+import './styles/global1.css';            // global CSS styles
 
 // Find the <div id="root"> and create a React root inside it
 const root = ReactDOM.createRoot(document.getElementById('root'));

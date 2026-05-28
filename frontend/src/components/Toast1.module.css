@@ -1,0 +1,45 @@
+/* Toast.module.css — Minimal light toasts */
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 500;
+  min-width: 220px;
+  animation: slideIn 0.25s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
+  background: #ffffff;
+  border: 1px solid var(--border);
+}
+
+.icon {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.success {
+  border-color: #bbf7d0;
+  color: var(--success);
+}
+
+.error {
+  border-color: #fecaca;
+  color: var(--error);
+}
+
+.info {
+  border-color: var(--border);
+  color: var(--text-primary);
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}

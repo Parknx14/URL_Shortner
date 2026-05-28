@@ -20,7 +20,7 @@
 
 import React, { useState } from 'react';
 import api from '../utils/api';
-import styles from './ShortenBox.module.css';
+import styles from './ShortenBox1.module.css';
 
 export default function ShortenBox({ onCreated, onError }) {
   const [longUrl,     setLongUrl]     = useState('');

@@ -6,7 +6,7 @@
 // =============================================================
 
 import React from 'react';
-import styles from './Toast.module.css';
+import styles from './Toast1.module.css';
 
 export default function Toast({ message, type = 'info' }) {
   const icons = { success: '✓', error: '✕', info: 'ℹ' };

@@ -18,7 +18,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import styles from './AuthPage.module.css';
+import styles from './AuthPage1.module.css';
 
 export default function LoginPage() {
   // useNavigate: lets us redirect the user programmatically

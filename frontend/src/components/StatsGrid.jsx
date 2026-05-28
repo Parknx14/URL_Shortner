@@ -11,7 +11,7 @@
 // =============================================================
 
 import React from 'react';
-import styles from './StatsGrid.module.css';
+import styles from './StatsGrid1.module.css';
 
 // Helper: formats numbers with commas → 10500 becomes "10,500"
 const fmt = n => (n || 0).toLocaleString();

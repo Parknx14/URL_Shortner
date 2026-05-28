@@ -26,7 +26,7 @@ import {
   Title, Tooltip, Legend, Filler
 } from 'chart.js';
 import { Line, Bar, Doughnut } from 'react-chartjs-2';
-import styles from './AnalyticsTab.module.css';
+import styles from './AnalyticsTab1.module.css';
 
 // REGISTER Chart.js components (required before use)
 ChartJS.register(

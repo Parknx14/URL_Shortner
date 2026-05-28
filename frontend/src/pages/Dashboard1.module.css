@@ -1,0 +1,55 @@
+/* Dashboard.module.css — Light minimal layout */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+}
+
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  width: 100%;
+  flex: 1;
+}
+
+/* Tab bar */
+.tabBar {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.tab {
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.15s;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  letter-spacing: -0.1px;
+}
+
+.tab:hover:not(.tabActive) {
+  color: var(--text-primary);
+}
+
+/* Active tab — simple underline, no background */
+.tabActive {
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--text-primary);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .main { padding: 20px 16px; }
+  .tab { padding: 8px 14px; font-size: 0.8rem; }
+}

@@ -18,7 +18,7 @@
 
 import React, { useState } from 'react';
 import api from '../utils/api';
-import styles from './UrlsTab.module.css';
+import styles from './UrlsTab1.module.css';
 
 // Helper: formats timestamp to relative time like "2h ago"
 function timeAgo(timestamp) {
