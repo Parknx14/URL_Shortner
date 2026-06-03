@@ -1,22 +1,4 @@
-// =============================================================
-// components/ShortenBox.jsx
-// =============================================================
-// The URL shortener input form — the core feature of the app.
-//
-// WHAT IT DOES:
-//   1. User pastes a long URL
-//   2. Optionally enters a custom alias or expiry
-//   3. Clicks "Shorten"
-//   4. Calls POST /api/urls
-//   5. Shows the result with a copy button
-//
-// COMPONENT COMMUNICATION:
-//   This component doesn't manage the URL list — the parent
-//   (Dashboard) does. When a URL is created successfully,
-//   this component calls onCreated(newUrl) — a prop function —
-//   to notify the parent. The parent updates the list.
-//   This is the "lifting state up" pattern.
-// =============================================================
+
 
 import React, { useState } from 'react';
 import api from '../utils/api';

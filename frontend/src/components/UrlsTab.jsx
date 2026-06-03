@@ -1,20 +1,4 @@
-// =============================================================
-// components/UrlsTab.jsx
-// =============================================================
-// Table of all the user's shortened URLs with actions.
-//
-// FEATURES:
-//   - Lists all URLs with title, short code, clicks, expiry
-//   - Copy short URL to clipboard
-//   - Simulate click (records analytics)
-//   - Delete URL
-//
-// CONDITIONAL RENDERING:
-//   React shows different UI based on state:
-//   - loading → show spinner
-//   - no urls → show empty state
-//   - has urls → show table
-// =============================================================
+
 
 import React, { useState } from 'react';
 import api from '../utils/api';

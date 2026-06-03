@@ -1,9 +1,4 @@
-// =============================================================
-// components/Toast.jsx
-// =============================================================
-// Temporary notification that appears and disappears.
-// Parent controls when it shows (passes message + type as props).
-// =============================================================
+
 
 import React from 'react';
 import styles from './Toast1.module.css';

@@ -1,14 +1,4 @@
-// =============================================================
-// components/StatsGrid.jsx
-// =============================================================
-// Displays 4 stat chips: Total URLs, Total Clicks, Clicks Today,
-// Cache Hit Rate.
-//
-// PURE/PRESENTATIONAL COMPONENT:
-//   This component has NO state and NO side effects.
-//   It just receives data via props and renders it.
-//   These are the simplest and most reusable components.
-// =============================================================
+
 
 import React from 'react';
 import styles from './StatsGrid1.module.css';

@@ -1,21 +1,3 @@
-// =============================================================
-// components/AnalyticsTab.jsx
-// =============================================================
-// Analytics dashboard with 4 charts:
-//   1. Clicks over 7 days (Line chart)
-//   2. Geographic distribution (Doughnut chart)
-//   3. Device breakdown (Bar chart)
-//   4. Referrer sources (Horizontal bar chart)
-//
-// CHART.JS WITH REACT:
-//   We use 'react-chartjs-2' which wraps Chart.js in React components.
-//   Before using any chart type, you must REGISTER it with Chart.js.
-//   (This is Chart.js v4's tree-shaking system — only bundle what you use)
-//
-// useMemo:
-//   Computes derived data (chart data) only when `urls` changes.
-//   Without useMemo, it would recompute on EVERY render (wasteful).
-// =============================================================
 
 import React, { useMemo } from 'react';
 import {

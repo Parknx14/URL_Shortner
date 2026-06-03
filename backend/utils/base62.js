@@ -1,31 +1,4 @@
-// =============================================================
-// utils/base62.js
-// =============================================================
-// Base62 encoding — the algorithm that turns long numbers into
-// short URL codes.
-//
-// WHY BASE62?
-//   Our database gives each URL an ID like 100001, 100002, etc.
-//   We convert this number to Base62 so:
-//     100001 → "q0T"  (3 chars instead of 6 digits)
-//     999999 → "4c91" (4 chars)
-//
-// WHAT IS A BASE?
-//   We normally use Base10 (digits 0-9, ten symbols).
-//   Computers use Base2 (bits: 0 and 1, two symbols).
-//   Base62 uses 62 symbols: 0-9 + a-z + A-Z
-//
-//   More symbols = more info per character = shorter codes!
-//
-// COLLISION HANDLING:
-//   Two URLs should never get the same short code.
-//   We use an auto-incrementing counter (like MongoDB's _id)
-//   so each URL gets a unique number → unique code.
-//   If somehow a collision happens (race condition), we retry.
-// =============================================================
 
-// All 62 characters used for encoding
-// Order matters — this defines what each digit "means"
 const CHARS = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 /**
